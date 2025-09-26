@@ -24,4 +24,4 @@ elif [ "$choice" -eq 2 ]; then
 else
     echo "Invalid choice. Please enter 1 or 2."
 fi
-sudo dnf install nginx -y
+dnf install nginx -y
