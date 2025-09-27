@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Choose an option:"
-echo "1. Check if a number is Even or Odd"
-echo "2. Add two numbers"
-read -p "Enter your choice (1 or 2): " choice
+echo "3. Check if a number is Even or Odd"
+echo "4. Add two numbers"
+read -p "Enter your choice (3 or 4): " choice
 
 if [ "$choice" -eq 1 ]; then
     read -p "Enter a number: " num
