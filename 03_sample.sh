@@ -2,7 +2,7 @@
  
 # No space before or after equal
 
-PERSON1="Suresh"
+PERSON1="Suresh.."
 
 PERSON2="Vijay."
 
