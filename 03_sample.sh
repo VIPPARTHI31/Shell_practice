@@ -4,7 +4,7 @@
 
 PERSON1="Suresh"
 
-PERSON2="Vijay"
+PERSON2="Vijay."
 
 echo "$PERSON1:: Hi $PERSON2, How are you?"
 
