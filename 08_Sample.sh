@@ -11,7 +11,7 @@ sudo yum install -y temurin-21-jdk
  
 # Verify installation
 echo "Java version installed:"
-java -version
+java --version
  
 echo "Java installation completed successfully!"
 
