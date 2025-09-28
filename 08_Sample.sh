@@ -1,17 +1,19 @@
 #!/bin/bash
-# Script to install Java on Ubuntu/Debian
+# Simple script to install the latest JDK available from package manager
  
-# Update system packages
-echo "Updating package list..."
-sudo dnf update -y
+set -e
  
-# Install default JDK (Java Development Kit)
-echo "Installing Java JDK..."
-sudo yum install -y temurin-21-jdk
+if command -v dnf >/dev/null 2>&1; then
+    echo "Detected dnf (Ubuntu/Debian). Installing latest JDK..."
+    sudo dnf update -y
+    sudo dnf install -y openjdk-21-jdk   # latest LTS available in repos
+elif command -v yum >/dev/null 2>&1; then
+    echo "Detected yum (RHEL/CentOS/Amazon Linux). Installing latest JDK..."
+    sudo dnf install -y java-21-openjdk-devel   # latest if available
+else
+    echo "Unsupported package manager. Please install manually."
+    exit 1
+fi
  
-# Verify installation
-echo "Java version installed:"
-java --version
- 
-echo "Java installation completed successfully!"
-
+echo "=== Java Installed Successfully ==="
+java -version
