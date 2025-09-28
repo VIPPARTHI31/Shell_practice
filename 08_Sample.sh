@@ -7,10 +7,11 @@ sudo dnf update -y
  
 # Install default JDK (Java Development Kit)
 echo "Installing Java JDK..."
-sudo dnf install -y default-jdk
+sudo yum install -y temurin-21-jdk
  
 # Verify installation
 echo "Java version installed:"
 java -version
  
 echo "Java installation completed successfully!"
+
